@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+class Faculty{
+	private:
+		string Faculty_Name;
+		int Faculty_Phone;
+	
+	public:
+		void storeFacultyDetails(string Faculty_Name, int Faculty_Phone);
+		void getStudentDetails();
+		void assignExamAdministrator();
+};
+
+void Faculty::storeFacultyDetails(string Faculty_Name, int Faculty_Phone){}
+
+void Faculty::getStudentDetails(){}
+
+void Faculty::assignExamAdministrator(){}

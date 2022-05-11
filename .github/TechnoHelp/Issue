@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+class Issue{
+	private:
+		int Issue_Id;
+		string Issue_Type;
+		char Issue_Date;
+	
+	public:
+		void storeIssue(int Issue_Id, string Issue_Type, char Issue_Date);
+		void checkIssue();
+		void respondIssue();
+		void displayIssue();
+		
+};
+
+void Issue::storeIssue(int Issue_Id, string Issue_Type, char Issue_Date){}
+
+void Issue::checkIssue(){}
+
+void Issue::respondIssue(){}
+
+void Issue::displayIssue(){}

@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class ExamRegistrationAdministrator{
+	
+	private:
+		string EA_Id;
+		string EA_Name;
+		int EA_Phone;
+		
+	public:
+		ExamRegistrationAdministrator(int EA_Id, string EA_Name, int EA_Phone);
+		void responseIssue();
+		void createExamschedule();
+		void updateExamschedule();
+		void modifyExamschedule();
+		void deleteExamschedule();
+};
+
+void ExamRegistrationAdministrator::createExamschedule(){}
+
+void ExamRegistrationAdministrator::updateExamschedule(){}
+
+void ExamRegistrationAdministrator::responseIssue(){}
+
+void ExamRegistrationAdministrator::modifyExamschedule(){}

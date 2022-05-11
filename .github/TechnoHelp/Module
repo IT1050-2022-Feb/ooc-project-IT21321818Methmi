@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+class Module{
+	private:
+		int M_Code;
+		string M_Name;
+	
+	public:
+		void storeModuleDetails(int M_Code, string M_Name);
+		void getResults();
+		void updateModule();
+	
+};
+
+void Module::getResults(){}
+
+void Module::updateModule(){}

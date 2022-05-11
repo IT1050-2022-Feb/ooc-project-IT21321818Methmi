@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class Exam{
+	private:
+		string E_Id;
+		string E_Type;
+	
+	public:
+		Exam(string E_Id, string E_Type);
+		void assignExamAdministrator();
+		void getResults();
+		void storeResultDetails();
+		void storeModuleExamDetails();
+};
+
+void Exam::assignExamAdministrator(){}
+
+void Exam::getResults(){}
+
+void Exam::storeModuleExamDetails(){}
+
+void Exam::storeResultDetails(){}

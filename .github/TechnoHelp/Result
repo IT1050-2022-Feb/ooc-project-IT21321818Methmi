@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+class Result{
+	private:
+		int Result_Id;
+		string Result_Status;
+	
+	public:
+		void storeResult(int Result_Id, string Result_Status);
+		void updateResult();
+		void displayResult();
+		void analyzeResult();
+	
+};
+
+void Result::storeResult(int Result_Id, string Result_Status){}
+
+void Result::updateResult(){}
+
+void Result::analyzeResult(){}
+
+void Result::displayResult(){}

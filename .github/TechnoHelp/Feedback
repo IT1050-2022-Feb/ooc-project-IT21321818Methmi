@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+
+class Feedback{
+	
+	private:
+		string Fb_No;
+		string Fb_Status;
+		
+	public:
+		void setFeedback(string fbno, string fbstatus);
+		void displayFeedback();
+};
+
+void Feedback::setFeedback(string fbno, string fbstatus)
+{
+	Fb_No=fbno;
+	Fb_Status=fbstatus;
+}
+
+void Feedback::displayFeedback()
+{
+	cout<<"Feedback No:"<<Fb_No<<endl;
+	cout<<"Feedback Status:"<<Fb_Status<<endl;
+}
+
+int main()
+{
+	Feedback*f1=new Feedback();
+	Feedback*f2=new Feedback();
+	Feedback*f3=new Feedback();
+	Feedback*f4=new Feedback();
+	Feedback*f5=new Feedback();
+	
+	f1->setFeedback("F01","Good Service");
+	f1->setFeedback("F02","Excellent Service");
+	f1->setFeedback("F03","Satisfied");
+	f1->setFeedback("F04","Need to improve");
+	f1->setFeedback("F05","Bad");
+	
+	f1->displayFeedback();
+	f2->displayFeedback();
+	f3->displayFeedback();
+	f4->displayFeedback();
+	f5->displayFeedback();
+	
+	cout<<endl;
+	
+	return 0;
+}

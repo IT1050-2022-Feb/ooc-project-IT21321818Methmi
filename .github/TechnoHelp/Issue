@@ -3,22 +3,64 @@ using namespace std;
 
 class Issue{
 	private:
-		int Issue_Id;
+		string Issue_Id;
 		string Issue_Type;
-		char Issue_Date;
 	
 	public:
-		void storeIssue(int Issue_Id, string Issue_Type, char Issue_Date);
+		void storeIssueDetails(string isid, string istyp);
 		void checkIssue();
-		void respondIssue();
 		void displayIssue();
 		
 };
 
-void Issue::storeIssue(int Issue_Id, string Issue_Type, char Issue_Date){}
+void Issue::storeIssueDetails(string isid, string istyp)
+{
+	Issue_Id = isid;
+	Issue_Type = istyp;
+}
 
-void Issue::checkIssue(){}
+void Issue::checkIssue()
+{
+	cout<<"Input new Issues :"<<Issue_Id<<" : ";
+	cin>>Issue_Id;
+}
 
-void Issue::respondIssue(){}
+void Issue::displayIssue()
+{
+	cout<<"Issue Id = "<<Issue_Id<<endl;
+	cout<<"Issue Type = "<<Issue_Type<<endl;
+	
+}
 
-void Issue::displayIssue(){}
+int main()
+{
+	Issue*i1 = new Issue();
+	Issue*i2 = new Issue();
+	Issue*i3 = new Issue();
+	Issue*i4 = new Issue();
+	Issue*i5 = new Issue();
+	
+	i1->storeIssueDetails("I1", "Software Issue");
+	i2->storeIssueDetails("I2", "Browser Issue");
+	i3->storeIssueDetails("I3", "Network Issue");
+	i4->storeIssueDetails("I4", "PC Issue");
+	i5->storeIssueDetails("I5", "PC Connection Issue");
+	
+	cout<<endl;
+	
+	i1->checkIssue();
+	i2->checkIssue();
+	i3->checkIssue();
+	i4->checkIssue();
+	i5->checkIssue();
+	
+	cout<<endl;
+	
+	i1->displayIssue();
+	i2->displayIssue();
+	i3->displayIssue();
+	i4->displayIssue();
+	i5->displayIssue();
+	
+	return 0;
+}

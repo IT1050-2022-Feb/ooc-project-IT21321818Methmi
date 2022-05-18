@@ -1,0 +1,76 @@
+#include<iostream>
+using namespace std;
+
+class Ticket{
+	private:
+		string T_Id;
+		string T_Status;
+		
+		
+	public:
+		void setTicketDetails(string tid, string tsts);
+		void addTicket();
+		void displayTicket();
+		
+}; 
+
+void Ticket::setTicketDetails(string tid, string tsts)
+{
+	T_Id = tid;
+	T_Status = tsts;
+
+}
+
+
+void Ticket::addTicket()
+{
+	cout<<"Input new Ticket Id"<<" : ";
+	cin>>T_Id;
+	cout<<"Input new Ticket Status:"<<T_Status<<" : ";
+	cin>>T_Status;
+		
+}
+
+void Ticket::displayTicket()
+{
+	cout<<"Ticket ID:"<<T_Id<<endl;
+	cout<<"Ticket Status:"<<T_Status<<endl;
+}
+
+int main()
+{
+	Ticket*T1 = new Ticket();
+	Ticket*T2 = new Ticket();
+	Ticket*T3 = new Ticket();
+	Ticket*T4 = new Ticket();
+	Ticket*T5 = new Ticket();
+	
+	T1->setTicketDetails( "0001", "ExamRelated");
+	T1->setTicketDetails("0002", "SoftwareRelated");
+	T1->setTicketDetails("0003", "NetworkRelated");
+	T1->setTicketDetails("0004", "TicketRaise");
+	T1->setTicketDetails("0004", "TicketRaise");
+	
+	cout<<endl;
+	
+	T1->addTicket();
+	T2->addTicket();
+	T3->addTicket();
+	T4->addTicket();
+	T5->addTicket();
+	
+	cout<<endl;
+	
+	T1->displayTicket();
+	T2->displayTicket();
+	T3->displayTicket();
+	T4->displayTicket();
+	T5->displayTicket();
+	
+	cout<<endl;
+	
+	return 0;
+	
+	
+	
+}

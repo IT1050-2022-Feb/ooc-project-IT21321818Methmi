@@ -1,0 +1,91 @@
+#include<iostream>
+using namespace std;
+
+class TicketCounterAssistant{
+	
+	private:
+		string TCA_Id;
+		string TCA_Name;
+		string TCA_Phone;
+		string TCA_Email;
+		
+	public:
+		void setTicketCounterAssistant(string tcid, string tcname, string tceml, string tcphn);
+		void addTicketCounterAssistant();
+		void displayTicketCounterAssistant();
+	
+};
+
+void TicketCounterAssistant::setTicketCounterAssistant(string tcid, string tcname, string tceml, string tcphn)
+{
+	TCA_Id = tcid;
+	TCA_Name = tcname;
+	TCA_Email = tceml;
+   TCA_Phone = tcphn;
+	
+
+}
+
+
+void TicketCounterAssistant::addTicketCounterAssistant()
+{
+	cout<<"Input new Ticket Counter Assistant:"<<TCA_Id<<" : ";
+	cin>>TCA_Id;
+	cout<<"Input new Ticket Counter Assistant:"<<TCA_Name<<" : ";
+	cin>>TCA_Name;
+	cout<<"Input new Ticket Counter Assistant:"<<TCA_Email<<" : ";
+	cin>>TCA_Email;
+	cout<<"Input new Ticket Counter Assistant:"<<TCA_Phone<<" : ";
+	cin>>TCA_Phone;
+
+}
+
+
+void TicketCounterAssistant::displayTicketCounterAssistant()
+{
+   cout<<"Ticket Counter Assistant ID:"<<TCA_Id<<endl;
+	cout<<"Ticket Counter Assistant Name:"<<TCA_Name<<endl;
+	cout<<"TicketCounter Assistant Email:"<<TCA_Email<<endl;
+	cout<<"TicketCounter Assistant Phone:"<<TCA_Phone<<endl;
+	
+	
+	
+}
+
+int main()
+{
+	TicketCounterAssistant*TCA1 = new TicketCounterAssistant();
+	TicketCounterAssistant*TCA2 = new TicketCounterAssistant();
+	TicketCounterAssistant*TCA3 = new TicketCounterAssistant();
+	TicketCounterAssistant*TCA4 = new TicketCounterAssistant();
+	TicketCounterAssistant*TCA5 = new TicketCounterAssistant();
+	
+	TCA1->setTicketCounterAssistant("TCA1", "Upali", "Upali@gmail.com","0712345678");
+	TCA2->setTicketCounterAssistant("TCA2", "Kapila", "Kapila@gmail.com","0712315678");
+	TCA3->setTicketCounterAssistant("TCA3", "Kasuni", "Kasuni@gmail.com","0712342678");
+	TCA4->setTicketCounterAssistant("TCA4", "Pamudi","Pamudi@gmail.com","0712335678");
+	TCA5->setTicketCounterAssistant("TCA5", "Aloka", "Aloka@gmail.com","0712344678");
+	
+	
+	cout<<endl;
+	
+	TCA1->addTicketCounterAssistant();
+	TCA2->addTicketCounterAssistant();
+	TCA3->addTicketCounterAssistant();
+	TCA4->addTicketCounterAssistant();
+	TCA5->addTicketCounterAssistant();
+	
+	cout<<endl;
+	
+	TCA1->displayTicketCounterAssistant();
+	TCA2->displayTicketCounterAssistant();
+   TCA3->displayTicketCounterAssistant();
+	TCA4->displayTicketCounterAssistant();
+   TCA5->displayTicketCounterAssistant();
+   
+   	
+	cout<<endl;
+	
+	return 0;
+   
+}

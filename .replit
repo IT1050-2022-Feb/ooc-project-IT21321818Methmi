@@ -1,8 +1,2 @@
-language = "C"
-#include <iostream>
-using namespace std;
-class Exam{
-  private:
-    string E_Id;
-    string E_Type;
-}
+
+

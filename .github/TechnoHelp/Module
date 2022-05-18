@@ -7,12 +7,61 @@ class Module{
 		string M_Name;
 	
 	public:
-		void storeModuleDetails(int M_Code, string M_Name);
-		void getResults();
+		void storeModuleDetails(int mcde, string mname);
+		void getModuleDetails();
 		void updateModule();
 	
 };
 
-void Module::getResults(){}
+void Module::storeModuleDetails(int mcde, string mname)
+{
+	M_Code = mcde;
+	M_Name = mname;
+}
 
-void Module::updateModule(){}
+void Module::getModuleDetails()
+{
+	cout<<"Input new Module Details"<<" : ";
+	cin>>M_Code;
+}
+
+void Module::updateModule()
+{
+	cout<<"Module Code = "<<M_Code<<endl;
+	cout<<"Module Name = "<<M_Name<<endl;
+}
+
+int main()
+{
+	Module*m1 = new Module();
+	Module*m2 = new Module();
+	Module*m3 = new Module();
+	Module*m4 = new Module();
+	Module*m5 = new Module();
+	
+	m1->storeModuleDetails(1011, "EAP");
+	m2->storeModuleDetails(1213, "IWT");
+	m3->storeModuleDetails(1460, "MC");
+	m4->storeModuleDetails(1450, "IP");
+	m5->storeModuleDetails(1270, "ISDM");
+	
+	cout<<endl;
+	
+	m1->getModuleDetails();
+	m2->getModuleDetails();
+	m3->getModuleDetails();
+	m4->getModuleDetails();
+	m5->getModuleDetails();
+	
+	cout<<endl;
+	
+	m1->updateModule();
+	m2->updateModule();
+	m3->updateModule();
+	m4->updateModule();
+	m5->updateModule();
+	
+	return 0;
+	
+	
+}

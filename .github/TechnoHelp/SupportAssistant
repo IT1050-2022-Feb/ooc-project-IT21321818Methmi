@@ -1,0 +1,75 @@
+#include<iostream>
+using namespace std;
+
+class SupportAssistant{
+	
+	private:
+		int SA_Id;
+		string SA_Name;
+		string SA_Email;
+		
+    public:
+    	void setSupportAssistantDetails(int said, string saname, string saemail);
+    	void updateSupportAssistant();
+    	void displaySupportAssistant();
+};
+
+void SupportAssistant::setSupportAssistantDetails(int said, string saname, string saemail)
+{
+	SA_Id = said;
+	SA_Name = saname;
+	SA_Email = saemail;
+}
+
+void SupportAssistant::updateSupportAssistant()
+{
+	cout<<"New Support Assistant ID:"<<SA_Id<<endl;
+	cout<<"New Support Assistant Name:"<<SA_Name<<endl;
+	cout<<"New Support Assistant Email:"<<SA_Email<<endl;
+	
+	
+}
+
+void SupportAssistant::displaySupportAssistant()
+{
+	cout<<"Support Assistant ID:"<<SA_Id<<" : ";
+	cin>>SA_Id;
+	cout<<"Support Assistant Name:"<<SA_Name<<" : ";
+	cin>>SA_Name;
+	cout<<"Support Assistant Email:"<<SA_Email<<" : ";
+	cin>>SA_Email;
+	
+}
+
+int main()
+{
+	SupportAssistant*SA1 = new SupportAssistant();
+	SupportAssistant*SA2 = new SupportAssistant();
+	SupportAssistant*SA3 = new SupportAssistant();
+	SupportAssistant*SA4 = new SupportAssistant();
+	SupportAssistant*SA5 = new SupportAssistant();
+	
+	SA1->setSupportAssistantDetails(0001,"Nimal","Nimal@gmail.com");
+	SA2->setSupportAssistantDetails(0002,"Kamal","Kamal@gmail.com");
+	SA3->setSupportAssistantDetails(0003,"Wimal","Wimal@gmail.com");
+	SA4->setSupportAssistantDetails(0004,"Amara","Amara@gmail.com");
+	SA5->setSupportAssistantDetails(0005,"Saman","Saman@gmail.com");
+	
+	SA1->updateSupportAssistant();
+	SA2->updateSupportAssistant();
+	SA3->updateSupportAssistant();
+	SA4->updateSupportAssistant();
+	SA5->updateSupportAssistant();
+	
+	cout<<endl;
+	
+	SA1->displaySupportAssistant();
+	SA2->displaySupportAssistant();
+	SA3->displaySupportAssistant();
+	SA4->displaySupportAssistant();
+	SA5->displaySupportAssistant();
+	
+	cout<<endl;
+	
+	return 0;
+}

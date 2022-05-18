@@ -7,17 +7,60 @@ class Result{
 		string Result_Status;
 	
 	public:
-		void storeResult(int Result_Id, string Result_Status);
+		void storeResult(int rid, string rsts);
 		void updateResult();
 		void displayResult();
-		void analyzeResult();
+		
 	
 };
 
-void Result::storeResult(int Result_Id, string Result_Status){}
+void Result::storeResult(int rid, string rsts)
+{
+	Result_Id = rid;
+	Result_Status = rsts;
+}
 
-void Result::updateResult(){}
+void Result::updateResult()
+{
+	cout<<"Input new Results"<<" : ";
+	cin>>Result_Id;
+}
 
-void Result::analyzeResult(){}
+void Result::displayResult()
+{
+	cout<<"Result Id = "<<Result_Id<<endl;
+	cout<<"Result Status = "<<Result_Status<<endl;
+}
 
-void Result::displayResult(){}
+int main()
+{
+	Result*r1 = new Result();
+	Result*r2 = new Result();
+	Result*r3 = new Result();
+	Result*r4 = new Result();
+	Result*r5 = new Result();
+	
+	r1->storeResult(01, "Pass");
+	r2->storeResult(02, "Fail");
+	r3->storeResult(03, "Repeat");
+	r4->storeResult(04, "Not Marked");
+	r5->storeResult(05, "Able to Continue");
+	
+	cout<<endl;
+	
+	r1->updateResult();
+	r2->updateResult();
+	r3->updateResult();
+	r4->updateResult();
+	r5->updateResult();
+	
+	cout<<endl;
+	
+	r1->displayResult();
+	r2->displayResult();
+	r3->displayResult();
+	r4->displayResult();
+	r5->displayResult();
+	
+	return 0;
+}

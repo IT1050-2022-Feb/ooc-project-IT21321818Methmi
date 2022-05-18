@@ -1,0 +1,66 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class SoftwareOperator{
+
+    private:
+    	string  SO_Id;
+    	string  SO_Name;
+    	string  SO_Phone;
+    	string  SO_Email;
+    	
+    public:
+    	void setSoftwareOperator(string  soid,string soname,string  sophone,string somail);
+    	void displaySoftwareOperatorContactDetails();
+    	
+    	
+		
+};
+
+void SoftwareOperator::setSoftwareOperator(string  soid,string soname,string  sophone,string somail)
+{  
+    SO_Id    = soid;
+	SO_Name  =soname;
+	SO_Phone = sophone;
+	SO_Email = somail;    
+   
+};
+
+void SoftwareOperator::displaySoftwareOperatorContactDetails()
+{   
+   cout<<"Software Operator ID:"<<SO_Id<<endl;
+   cout<<"Software Operator Name:"<<SO_Name<<endl;
+   cout<<"Software Operator Contact Number:"<<SO_Phone<<endl;
+   cout<<"Software Operator Email:"<<SO_Email<<endl;
+};
+
+
+
+int main()
+{
+	SoftwareOperator*SO1= new SoftwareOperator();
+	SoftwareOperator*SO2= new SoftwareOperator();
+	SoftwareOperator*SO3= new SoftwareOperator();
+	SoftwareOperator*SO4= new SoftwareOperator();
+	SoftwareOperator*SO5= new SoftwareOperator();
+	
+	SO1->setSoftwareOperator("SO1","Sama","0712345678","Sama@gmail.com");
+	SO2->setSoftwareOperator("SO2","Namal","0712345678","Namal@gmail.com");
+	SO3->setSoftwareOperator("SO3","Dimuthu","0712345678","Dimuthu@gmail.com");
+	SO4->setSoftwareOperator("SO4","Thisara","0712345678","Thisara@gmail.com");
+	SO5->setSoftwareOperator("SO1","Hansi","0712345678","Hansi@gmail.com");
+	
+	cout<<endl;
+	
+	SO1->displaySoftwareOperatorContactDetails();
+	SO2->displaySoftwareOperatorContactDetails();
+	SO3->displaySoftwareOperatorContactDetails();
+	SO4->displaySoftwareOperatorContactDetails();
+	SO5->displaySoftwareOperatorContactDetails();
+	
+	cout<<endl;
+	
+	return 0;
+	
+}

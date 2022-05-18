@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+class NetworkAdministrator{
+    
+	private:
+        string NetId;
+        string Netname;
+        string Netphone;
+        string Netemail;
+        
+      public:
+        void setNetworkAdministrator(string NETid, string NETname, string NETphone,string NETemail);
+    	void displayNetworkAdministratorDetails();
+    	
+
+};
+        
+void NetworkAdministrator::setNetworkAdministrator(string NETid,string NETname, string NETphone, string NETemail)
+{
+    NetId =NETid;
+    Netname =NETname;
+    Netphone =NETphone;
+    Netemail =NETemail;
+}
+        
+void NetworkAdministrator::displayNetworkAdministratorDetails()
+{
+    cout<<"Network Administator ID:"<<NetId<<endl;
+    cout<<"Network Administator Name:"<<Netname<<endl;
+    cout<<"Network Administator Contact Number:"<< Netphone<<endl;
+    cout<<"Network Administator Email:"<<Netemail<<endl;
+
+}
+
+int main()
+{
+  NetworkAdministrator*N1= new NetworkAdministrator();
+	NetworkAdministrator*N2= new NetworkAdministrator();
+	NetworkAdministrator*N3= new NetworkAdministrator();
+	NetworkAdministrator*N4= new NetworkAdministrator();
+	NetworkAdministrator*N5= new NetworkAdministrator();
+
+    N1->setNetworkAdministrator("NET1","Gamini","0712345678","Gamini@gmail.com");
+	N2->setNetworkAdministrator("NET2","Kalpana","0712345678","Kalpana@gmail.com");
+	N3->setNetworkAdministrator("NET3","Mayura","0712345678","Mayura@gmail.com");
+	N4->setNetworkAdministrator("NET4","Jayani","0712345678","Jayani@gmail.com");
+	N5->setNetworkAdministrator("NET5","Ramila","0712345678","Ramila@gmail.com");
+	
+	cout<<endl;
+     
+  N1->displayNetworkAdministratorDetails();
+	N2->displayNetworkAdministratorDetails();
+	N3->displayNetworkAdministratorDetails();
+	N4->displayNetworkAdministratorDetails();
+	N5->displayNetworkAdministratorDetails();
+    
+    cout<<endl;
+
+    return 0;
+}

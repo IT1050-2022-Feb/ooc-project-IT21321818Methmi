@@ -6,21 +6,69 @@ class ExamRegistrationAdministrator{
 	private:
 		string EA_Id;
 		string EA_Name;
-		int EA_Phone;
+		string EA_Phone;
 		
 	public:
-		ExamRegistrationAdministrator(int EA_Id, string EA_Name, int EA_Phone);
-		void responseIssue();
-		void createExamschedule();
-		void updateExamschedule();
-		void modifyExamschedule();
-		void deleteExamschedule();
+		void setExamRegistrationAdministratorDetails(string eaid, string eaname, string eapne);
+		void updateExamRegistrationAdministrator();
+		void modifyExamRegistrationAdministrator();
 };
 
-void ExamRegistrationAdministrator::createExamschedule(){}
+void ExamRegistrationAdministrator::setExamRegistrationAdministratorDetails(string eaid, string eaname, string eapne)
+{
+	EA_Id = eaid;
+	EA_Name = eaname;
+	EA_Phone = eapne;	
+}
 
-void ExamRegistrationAdministrator::updateExamschedule(){}
+void ExamRegistrationAdministrator::updateExamRegistrationAdministrator()
+{
+	cout<<"Exam Registration Administrator ID:"<<EA_Id<<endl;
+	cout<<"Exam Registration Administrator Name:"<<EA_Name<<endl;
+	cout<<"Exam Registration Administrator Contact No:"<<EA_Phone<<endl;
+}
 
-void ExamRegistrationAdministrator::responseIssue(){}
+void ExamRegistrationAdministrator::modifyExamRegistrationAdministrator()
+{
+	cout<<"Input new Exam Registration Administrator Id:"<<EA_Id<<" : ";
+	cin>>EA_Id;
+	cout<<"Input new Exam Registration Administrator Name:"<<EA_Name<<" : ";
+	cin>>EA_Name;
+	cout<<"Input new Exam Registration Administrator Contact No:"<<EA_Phone<<" : ";
+	cin>>EA_Phone;
+}
 
-void ExamRegistrationAdministrator::modifyExamschedule(){}
+int main()
+{
+	ExamRegistrationAdministrator*ea1 = new ExamRegistrationAdministrator();
+	ExamRegistrationAdministrator*ea2 = new ExamRegistrationAdministrator();
+	ExamRegistrationAdministrator*ea3 = new ExamRegistrationAdministrator();
+	ExamRegistrationAdministrator*ea4 = new ExamRegistrationAdministrator();
+	ExamRegistrationAdministrator*ea5 = new ExamRegistrationAdministrator();
+	
+	ea1->setExamRegistrationAdministratorDetails("EA01", "Erandi", "0712345678");
+	ea2->setExamRegistrationAdministratorDetails("EA02", "Nalaka", "0712345673");
+	ea3->setExamRegistrationAdministratorDetails("EA03", "Samantha", "0712345138");
+	ea4->setExamRegistrationAdministratorDetails("EA04", "Hansaka", "0712345628");
+	ea5->setExamRegistrationAdministratorDetails("EA05", "Kumara", "0712345578");
+	
+	cout<<endl;
+	
+	ea1->updateExamRegistrationAdministrator();
+	ea2->updateExamRegistrationAdministrator();
+	ea3->updateExamRegistrationAdministrator();
+	ea4->updateExamRegistrationAdministrator();
+	ea5->updateExamRegistrationAdministrator();
+	
+	cout<<endl;
+	
+	ea1->modifyExamRegistrationAdministrator();
+	ea2->modifyExamRegistrationAdministrator();
+	ea3->modifyExamRegistrationAdministrator();
+	ea4->modifyExamRegistrationAdministrator();
+	ea5->modifyExamRegistrationAdministrator();
+	
+	cout<<endl;
+	
+	return 0;
+}

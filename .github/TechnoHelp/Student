@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+
+class Student{
+	
+	private:
+		string Std_TempId;
+		string Std_Password;
+		
+	public:
+		void setStudent(string stdtempid, string stdpassword);
+		void updateStudent();
+		void displayStudent();
+};
+
+void Student::setStudent(string stdtempid, string stdpassword)
+{
+	Std_TempId=stdtempid;
+	Std_Password=stdpassword;
+	
+}
+
+void Student::updateStudent()
+{
+	cout<<"New Student Temp ID:";
+	cin>>Std_TempId;
+	
+	cout<<"New Student Password;";
+	cin>>Std_Password;
+}
+
+void Student::displayStudent()
+{
+	cout<<"Student Temp ID:"<<Std_TempId<<endl;
+	cout<<"Student Password:"<<Std_Password<<endl;
+}
+
+int main()
+{
+	Student*s1=new Student();
+	Student*s2=new Student();
+	Student*s3=new Student();
+	Student*s4=new Student();
+	Student*s5=new Student();
+	
+	s1->setStudent("Id01","Id01");
+	s2->setStudent("Id02","Id02");
+	s3->setStudent("Id03","Id03");
+	s4->setStudent("Id04","Id04");
+	s5->setStudent("Id05","Id05");
+	
+	s1->updateStudent();
+	s2->updateStudent();
+	s3->updateStudent();
+	s4->updateStudent();
+	s5->updateStudent();
+	
+	cout<<endl;
+	
+	s1->displayStudent();
+	s2->displayStudent();
+	s3->displayStudent();
+	s4->displayStudent();
+	s5->displayStudent();
+	
+	cout<<endl;
+	
+	return 0;
+	
+}

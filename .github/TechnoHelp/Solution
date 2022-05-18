@@ -1,0 +1,60 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Solution{
+
+    private:
+    	string S_Id;
+    	string S_Status;
+    	
+    public:
+    	void displaysolution();
+    	void setstoresolution(string sid ,string s_status );
+    	
+    	
+    	
+		
+};
+void Solution::setstoresolution(string sid,string  s_status)
+{
+	S_Id=sid;
+	S_Status= s_status;
+}
+
+void Solution::displaysolution()
+{
+	cout<<"SOLUTION ID :"<<S_Id<<endl;
+	cout<<"SOLUTION STATUS :"<<S_Status<<endl;
+}
+
+int main(){
+	
+	Solution*S1= new Solution();
+	Solution*S2= new Solution();
+	Solution*S3= new Solution();
+	Solution*S4= new Solution();
+	Solution*S5= new Solution();
+	
+	S1->setstoresolution("001","AlreadySolved");
+	S2->setstoresolution("002","Inqueue");
+	S3->setstoresolution("003","ReadytoSolve");
+	S4->setstoresolution("004","Forwarded");
+	S5->setstoresolution("005","WaitingforReply");
+	
+	cout<<endl;
+	
+	S1->displaysolution();
+	S2->displaysolution();
+	S3->displaysolution();
+	S4->displaysolution();
+	S5->displaysolution();
+	
+	cout<<endl;
+	
+
+	
+	return 0;
+	
+	
+}

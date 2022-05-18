@@ -6,17 +6,60 @@ class Exam{
 		string E_Type;
 	
 	public:
-		Exam(string E_Id, string E_Type);
-		void assignExamAdministrator();
+		void setExamDetails(string E_Id,string E_Type);
+		void displayExamDetails();
 		void getResults();
-		void storeResultDetails();
-		void storeModuleExamDetails();
 };
 
-void Exam::assignExamAdministrator(){}
+void Exam::setExamDetails(string eid, string etyp)
+{
+	E_Id = eid;
+	E_Type = etyp;
+}
 
-void Exam::getResults(){}
+void Exam::displayExamDetails()
+{
+	cout<<"Exam ID = "<<E_Id<<endl
+	<<"Exam Type = "<<E_Type<<endl;
+	
+}
 
-void Exam::storeModuleExamDetails(){}
+void Exam::getResults()
+{
+	cout<<"Input Exam Details of"<<E_Id<<" : ";
+	cin>>E_Id;
+}
 
-void Exam::storeResultDetails(){}
+int main()
+{
+	Exam*e1 = new Exam;
+	Exam*e2 = new Exam;
+	Exam*e3 = new Exam;
+	Exam*e4 = new Exam;
+	Exam*e5 = new Exam;
+	
+	e1->setExamDetails("E01", "Orientation");
+	e2->setExamDetails("E02", "SpotTest");
+	e3->setExamDetails("E03", "MidTerm");
+	e4->setExamDetails("E04", "Final");
+	e5->setExamDetails("E05", "OnlineTest");
+	
+	cout<<endl;
+	
+	e1->getResults();
+	e2->getResults();
+	e3->getResults();
+	e4->getResults();
+	e5->getResults();
+	
+	cout<<endl;
+	
+	e1->displayExamDetails();
+	e2->displayExamDetails();
+	e3->displayExamDetails();
+	e4->displayExamDetails();
+	e5->displayExamDetails();
+	
+	return 0;
+	
+}

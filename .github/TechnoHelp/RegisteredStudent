@@ -1,0 +1,95 @@
+#include<iostream>
+using namespace std;
+
+class RegisteredStudent{
+	
+	private:
+		string Std_Id;
+		string Std_Name;
+		string Std_Phone;
+		string Std_Email;
+		string Std_Faculty;
+		int Std_SeatNo;
+		
+	public:
+      void setRegisteredStudent(string stdid, string stdname, string stdphn, string stdeml, string stdfclty, int stdstno);
+	  void updateRegisteredStudent();
+	  void displayRegisteredStudent();
+	
+};
+
+void RegisteredStudent::setRegisteredStudent(string stdid, string stdname, string stdphn, string stdeml, string stdfclty, int stdstno)
+{
+	Std_Id = stdid;
+	Std_Name = stdname;
+	Std_Phone = stdphn;
+	Std_Email = stdeml;
+	Std_Faculty = stdfclty;
+	Std_SeatNo = stdstno;
+
+}
+
+
+void RegisteredStudent::updateRegisteredStudent()
+{
+	cout<<"Registered Student ID:"<<Std_Id<<endl;
+	cout<<"Registered Student Name:"<<Std_Name<<endl;
+	cout<<"Registered Student Contact No:"<<Std_Phone<<endl;
+	cout<<"Registered Student E-mail:"<<Std_Email<<endl;
+	cout<<"Registered Student Faculty:"<<Std_Faculty<<endl;
+	cout<<"Registered Student Seat No:"<<Std_SeatNo<<endl;
+
+}
+
+
+void RegisteredStudent::displayRegisteredStudent()
+{
+	cout<<"Input new Registered Student Id:"<<Std_Id<<" : ";
+	cin>>Std_Id;
+	cout<<"Input new Registered Student Name:"<<Std_Name<<" : ";
+	cin>>Std_Name;
+	cout<<"Input new Exam Registered Student Contact No:"<<Std_Phone<<" : ";
+	cin>>Std_Phone;
+	cout<<"Input new Registered Student E-mail:"<<Std_Email<<" : ";
+	cin>>Std_Email;
+	cout<<"Input new Registered Student Faculty:"<<Std_Faculty<<" : ";
+	cin>>Std_Faculty;
+	cout<<"Input new Registered Student Seat No:"<<Std_SeatNo<<" : ";
+	cin>>Std_SeatNo;
+
+}
+
+int main()
+{
+	RegisteredStudent*std1 = new RegisteredStudent();
+	RegisteredStudent*std2 = new RegisteredStudent();
+	RegisteredStudent*std3 = new RegisteredStudent();
+	RegisteredStudent*std4 = new RegisteredStudent();
+	RegisteredStudent*std5 = new RegisteredStudent();
+	
+	std1->setRegisteredStudent("0001", "nethmi", "nethmi@gmail.com", "0712345678", "Computing", 1);
+	std2->setRegisteredStudent("0002", "methmi", "methmi@gmail.com" , "0723456789", "Humanities and Sciences", 2);
+	std3->setRegisteredStudent("0003" , "nadeejaya", "nadeejaya@gmail.com","0713456789", "Law", 3);
+	std4->setRegisteredStudent("0004", "theshan", "theshan@gmail.com", "0715467891", "Law", 4);
+	std5->setRegisteredStudent("0005", " vimankith", "vimankith@gmail.com", "0723476891", "Computing", 5);
+	
+
+	cout<<endl;
+	
+	std1->updateRegisteredStudent();
+	std2->updateRegisteredStudent();
+	std3->updateRegisteredStudent();
+	std4->updateRegisteredStudent();
+	std5->updateRegisteredStudent();
+	
+	
+	std1->displayRegisteredStudent();
+	std2->displayRegisteredStudent();
+	std3->displayRegisteredStudent();
+	std4->displayRegisteredStudent();
+	std5->displayRegisteredStudent();
+	
+	cout<<endl;
+	
+	return 0;
+}

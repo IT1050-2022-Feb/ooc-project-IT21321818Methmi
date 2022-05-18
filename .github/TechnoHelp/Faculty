@@ -4,16 +4,63 @@ using namespace std;
 class Faculty{
 	private:
 		string Faculty_Name;
-		int Faculty_Phone;
+		string Faculty_Phone;
 	
 	public:
-		void storeFacultyDetails(string Faculty_Name, int Faculty_Phone);
-		void getStudentDetails();
-		void assignExamAdministrator();
+		void storeFacultyDetails(string fname, string fpne);
+		void displayFacultyDetails();
+		void getFacultyDetails();
 };
 
-void Faculty::storeFacultyDetails(string Faculty_Name, int Faculty_Phone){}
+void Faculty::storeFacultyDetails(string fname, string fpne)
+{
+	Faculty_Name = fname;
+	Faculty_Phone = fpne;
+}
 
-void Faculty::getStudentDetails(){}
+void Faculty::displayFacultyDetails()
+{
+	cout<<"Faculty Name = "<<Faculty_Name<<endl;
+	cout<<"Faculty Contact No = "<<Faculty_Phone<<endl;
+}
 
-void Faculty::assignExamAdministrator(){}
+void Faculty::getFacultyDetails()
+{
+	cout<<"Input new Faculty Contact No"<<Faculty_Name<<" : ";
+	cin>>Faculty_Phone;
+}
+
+int main()
+{
+	Faculty*f1 = new Faculty();
+	Faculty*f2 = new Faculty();
+	Faculty*f3 = new Faculty();
+	Faculty*f4 = new Faculty();
+	Faculty*f5 = new Faculty();
+	
+	f1->storeFacultyDetails("Computing", "0768476385");
+	f2->storeFacultyDetails("Humanities and Sciences", "0715937457");
+	f3->storeFacultyDetails("Engineering", "0717936034");
+	f4->storeFacultyDetails("Medical", "0774635095");
+	f5->storeFacultyDetails("Law", "0774735840");
+	
+	cout<<endl;
+	
+	f1->getFacultyDetails();
+	f2->getFacultyDetails();
+	f3->getFacultyDetails();
+	f4->getFacultyDetails();
+	f5->getFacultyDetails();
+	
+	cout<<endl;
+	
+	f1->displayFacultyDetails();
+	f2->displayFacultyDetails();
+	f3->displayFacultyDetails();
+	f4->displayFacultyDetails();
+	f5->displayFacultyDetails();
+	
+	cout<<endl;
+	
+	return 0;
+}
